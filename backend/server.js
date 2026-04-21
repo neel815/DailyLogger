@@ -21,7 +21,7 @@ app.use(
 );
 
 app.get('/health', (_req, res) => {
-    res.json({ ok: true });
+    res.json({ ok: true, groqConfigured: Boolean(process.env.GROQ_API_KEY) });
 });
 
 app.post('/summarize', async (req, res) => {
@@ -78,4 +78,5 @@ app.post('/summarize', async (req, res) => {
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Standup backend listening on 0.0.0.0:${port}`);
+    console.log(`GROQ_API_KEY configured: ${Boolean(process.env.GROQ_API_KEY)}`);
 });
