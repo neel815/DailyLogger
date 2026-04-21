@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Standup Logger - History</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="history-container">
+        <h1>Standup History</h1>
+        
+        <div class="history-controls">
+            <input type="text" id="searchInput" placeholder="Search entries..." class="search-input" />
+            <button id="exportBtn" class="btn btn-primary">Export as CSV</button>
+            <button id="settingsBtn" class="btn btn-secondary">Settings</button>
+        </div>
+        
+        <div id="entriesList" class="entries-list">
+            <p class="placeholder">No entries found. Start by creating a standup in the popup!</p>
+        </div>
+    </div>
+    
+    <script src="history.js"></script>
+</body>
+</html>

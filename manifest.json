@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Daily Standup Logger",
+  "version": "1.0.0",
+  "description": "Fetch your GitHub commits and generate a daily standup summary with AI. Replace localhost backend URL with your production URL before publishing.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.github.com/",
+    "http://localhost:3000/",
+    "https://*.up.railway.app/"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Daily Standup Logger"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  }
+}
