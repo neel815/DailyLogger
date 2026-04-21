@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const whatDidIDo = document.getElementById('whatDidIDo');
     const whatWillIDo = document.getElementById('whatWillIDo');
     const blockers = document.getElementById('blockers');
+    const backendUrl = 'https://dailylogger-production.up.railway.app';
 
     const today = new Date().toISOString().split('T')[0];
 
@@ -44,8 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             showStatus('Generating summary with AI...', 'loading');
 
-            // Replace this localhost URL with your production backend URL before publishing.
-            const response = await fetch('http://localhost:3000/summarize', {
+            const response = await fetch(`${backendUrl}/summarize`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

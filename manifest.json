@@ -8,8 +8,7 @@
   ],
   "host_permissions": [
     "https://api.github.com/",
-    "http://localhost:3000/",
-    "https://*.up.railway.app/"
+    "https://dailylogger-production.up.railway.app/"
   ],
   "action": {
     "default_popup": "popup.html",
