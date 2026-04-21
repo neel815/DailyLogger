@@ -9,6 +9,7 @@ html, body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: #333;
     line-height: 1.5;
+    background: #000;
 }
 
 html.popup-page,
@@ -18,7 +19,7 @@ body.popup-page {
 }
 
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #000;
     min-height: 100vh;
     padding: 10px;
 }
@@ -29,15 +30,13 @@ body.popup-page {
     min-width: 720px;
     padding: 14px;
     overflow-x: hidden;
-    background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.24), transparent 32%),
-        linear-gradient(160deg, #6f7bf7 0%, #5a63d8 45%, #3a2d77 100%);
+    background: #000;
 }
 
 /* Containers */
 .popup-container {
     width: 550px;
-    background: white;
+    background: #fff;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -49,8 +48,8 @@ body.popup-page .popup-container {
     min-width: 692px;
     padding: 22px 18px 18px;
     border-radius: 24px;
-    border: 1px solid rgba(111, 123, 247, 0.18);
-    box-shadow: 0 18px 40px rgba(33, 20, 72, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
 .options-container {
@@ -130,7 +129,7 @@ body.popup-page .form-group:last-of-type {
 .input-card {
     padding: 14px;
     border-radius: 18px;
-    background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+    background: #fff;
     border: 1px solid #e2e8f8;
     box-shadow: 0 10px 24px rgba(88, 102, 181, 0.08);
 }
@@ -168,6 +167,7 @@ input[type="password"] {
     font-size: 13px;
     transition: border-color 0.2s, box-shadow 0.2s;
     background: #fbfcff;
+    color: #333;
 }
 
 textarea:focus,
@@ -206,12 +206,14 @@ small code {
     border-radius: 3px;
     font-family: 'Courier New', monospace;
     font-size: 12px;
+    color: #333;
+    border: 1px solid #ddd;
 }
 
 /* Buttons */
 .btn {
     padding: 11px 14px;
-    border: none;
+    border: 1px solid #fff;
     border-radius: 14px;
     font-size: 13px;
     font-weight: 600;
@@ -238,12 +240,12 @@ small code {
 }
 
 .btn-primary {
-    background: #667eea;
+    background: #000;
     color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-    background: #5568d3;
+    background: #000;
 }
 
 #generateBtn {
@@ -253,32 +255,33 @@ small code {
 }
 
 .btn-success {
-    background: #27ae60;
+    background: #000;
     color: white;
 }
 
 .btn-success:hover:not(:disabled) {
-    background: #229954;
+    background: #000;
 }
 
 .btn-secondary {
-    background: #95a5a6;
+    background: #000;
     color: white;
 }
 
 .btn-secondary:hover:not(:disabled) {
-    background: #7f8c8d;
+    background: #000;
 }
 
 .btn-delete {
-    background: #e74c3c;
+    background: #000;
     color: white;
     padding: 6px 12px;
     font-size: 12px;
+    border: 1px solid #fff;
 }
 
 .btn-delete:hover {
-    background: #c0392b;
+    background: #000;
 }
 
 /* Button Groups */
@@ -394,7 +397,7 @@ body.popup-page .button-group {
 }
 
 .entry-section {
-    background: white;
+    background: #fff;
     padding: 12px;
     border-radius: 4px;
     border-left: 3px solid #667eea;

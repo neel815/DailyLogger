@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const today = new Date().toISOString().split('T')[0];
 
-    loadTodayEntry();
+    resetForm();
 
     generateBtn.addEventListener('click', generateFromGitHub);
     saveBtn.addEventListener('click', saveEntry);
@@ -127,15 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function loadTodayEntry() {
-        chrome.storage.local.get([today], result => {
-            if (result[today]) {
-                const entry = result[today];
-                whatDidIDo.value = entry.whatDidIDo || '';
-                whatWillIDo.value = entry.whatWillIDo || '';
-                blockers.value = entry.blockers || '';
-            }
-        });
+    function resetForm() {
+        whatDidIDo.value = '';
+        whatWillIDo.value = '';
+        blockers.value = '';
     }
 
     function showStatus(message, type) {
