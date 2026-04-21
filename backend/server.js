@@ -6,7 +6,7 @@ const rateLimit = require('express-rate-limit');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || process.env.RAILWAY_PORT || 3000;
 const allowedOrigin = process.env.CORS_ORIGIN || '*';
 
 app.use(cors({ origin: allowedOrigin }));
@@ -76,6 +76,6 @@ app.post('/summarize', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Standup backend listening on port ${port}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Standup backend listening on 0.0.0.0:${port}`);
 });
